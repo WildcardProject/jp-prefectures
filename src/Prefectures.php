@@ -1,22 +1,22 @@
 <?php
 namespace ProgrammingCat\JpPrefectures;
 
-use Language;
-
 class Prefectures {
     protected $_prefectures;
+    protected $_lang = 'jp';
+
     public function __construct() {
-        $this->_prefectures = include(dirname(__FILE__) . '../SourceData/' . (new Langage)->lang() . 'prefectures.php');
+        $this->_prefectures = include(dirname(__FILE__) . '/SourceData/' . $this->_lang . '/prefectures.php');
     }
     public function prefectureById($id) {
-        return isset($this->_prefecture[$id]) ? $this->_prefecture[$id] : null;
+        return isset($this->_prefectures[$id]) ? $this->_prefectures[$id] : null;
     }
     public function prefectureByName($id) {
-        return isset($this->_prefecture[$id]) ? $this->_prefecture[$id] : null;
+        return isset($this->_prefectures[$id]) ? $this->_prefectures[$id] : null;
     }
-    public function prefectureInfo($str)
+    public function prefecture($str)
     {
-        if (!$this->_preectures || !is_array($this->_prefectures)) return null;
+        if (!$this->_prefectures || !is_array($this->_prefectures)) return null;
         // ID検索
         if (preg_match('/^[1-9]{1,2}$/', $str)) {
             return $this->prefectureById($str);
@@ -36,8 +36,6 @@ class Prefectures {
         return null;
     }
     public function prefectures($filt=NULL) {
-        if (!$filt) {
-            return $this->_prefectures;
-        }
+        return $this->_prefectures;
     }
 } 

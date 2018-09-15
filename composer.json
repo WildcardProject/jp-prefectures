@@ -14,10 +14,5 @@
             "ProgrammingCat\\JpPrefectures\\": "src/"
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": "ProgrammingCat\\JpPrefectures\\JpPrefecturesServiceProvider"
-        }
-    },
     "require": {}
 }
