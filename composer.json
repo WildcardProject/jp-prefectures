@@ -1,0 +1,23 @@
+{
+    "name": "programming_cat/jp_prefectures",
+    "description": "日本の都道府県の情報を返すパッケージです",
+    "type": "library",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "programming cat",
+            "email": "takanori@yamazaki.tech"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ProgrammingCat\\JpPrefectures\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": "ProgrammingCat\\JpPrefectures\\JpPrefecturesServiceProvider"
+        }
+    },
+    "require": {}
+}
