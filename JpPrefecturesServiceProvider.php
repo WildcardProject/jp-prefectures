@@ -1,6 +1,5 @@
 <?php
-
-namespace App\Providers;
+namespace ProgrammingCat\JpPrefectures\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
